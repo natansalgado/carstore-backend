@@ -4,7 +4,6 @@ const { Schema, model } = mongoose;
 
 export interface IUser {
   name: string;
-  created_at: Date;
 }
 
 const userSchema = new Schema(
