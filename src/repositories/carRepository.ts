@@ -18,6 +18,9 @@ const createCar = async (car: ICar): Promise<ICar | Error> => {
   if (!(await User.findById(car.owner)))
     return new Error("User doesn't exists");
 
+  if (car.modifications.length <= 0) car.modifications = ["N/A"];
+  if (car.damaged_parts.length <= 0) car.damaged_parts = ["N/A"];
+
   const newCar = new Car(car);
   await newCar.save();
   return newCar;

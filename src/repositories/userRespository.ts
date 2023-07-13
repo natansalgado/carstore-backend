@@ -1,28 +1,18 @@
 import { User, IUser } from "../models/User";
-import { Car, ICar } from "../models/Car";
-
-interface IUserAndCars extends IUser {
-  cars: ICar[];
-}
+import { Car } from "../models/Car";
 
 const getUsers = async (): Promise<IUser[]> => {
   const users = await User.find();
   return users;
 };
 
-const getUser = async (id: string): Promise<IUserAndCars | Error> => {
+const getUser = async (id: string): Promise<IUser | Error> => {
   const user = await User.findById(id);
-  const userCars = await Car.find({ owner: id });
-  let userCopy;
 
   if (!user) return new Error("User doesn't exists.");
-  if (userCars) {
-    userCopy = JSON.parse(JSON.stringify(user));
-    userCopy.cars = userCars;
-  }
 
   console.log("aaaaa");
-  return userCopy;
+  return user;
 };
 
 const createUser = async (user: IUser): Promise<IUser | Error> => {

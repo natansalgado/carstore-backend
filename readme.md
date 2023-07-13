@@ -1,7 +1,7 @@
 > USERS HTTP REQUEST METHODS:
 >
 > - GET: '/users' - To show all users.
-> - GET: '/users/:id' - To find a user and all his cars by id (the id need to be ObjectId).
+> - GET: '/users/:id' - To find a user by id (the id need to be ObjectId).
 > - POST: '/users' - To create a user (need a name in the json body).
 > - PATCH: '/users/:id - To update a user (the id need to be ObjectId and need a name in the json body).
 > - DELETE '/users/:id - To delete a user and all his cars (the id need to be ObjectId).
