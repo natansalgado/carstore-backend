@@ -13,3 +13,7 @@
 > - POST: '/cars' - To create a car (need the car informations in the json body).
 > - PATCH: '/cars/:id - To update a car (the id need to be ObjectId and need the car informations in the json body).
 > - DELETE '/cars/:id - To delete a car (the id need to be ObjectId).
+
+> USERS WITH CARS HTTP REQUEST METHOD:
+>
+> - GET: '/userswithcars' - To show all users and his cars

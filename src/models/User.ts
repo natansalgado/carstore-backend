@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 const { Schema, model } = mongoose;
 
 export interface IUser {
+  created_at?: Date;
   name: string;
 }
 
