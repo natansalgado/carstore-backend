@@ -1,8 +1,9 @@
-import mongoose from "mongoose";
+import mongoose, { ObjectId } from "mongoose";
 
 const { Schema, model } = mongoose;
 
 export interface IUser {
+  _id: ObjectId;
   created_at?: Date;
   name: string;
 }
